@@ -5,26 +5,67 @@ body{
     height: 100vw;
     background-color: rgb(163, 156, 241);
 } 
+h1{
+    color:blueviolet; 
+    font:40px;
+}
 
 h2{
     font-size: 2rem;
     color:#a63;
 }
+
 header{
     background-color: hsl(71, 87%, 50%);
 }
+nav ul li{
+    display: inline;
+    list-style: none;
+}
+nav ul li a{
+    border: 2px solid indigo ;
+    background-color: cornsilk;
+    text-decoration: none;
+    padding: 4px;
+    color:indigo; 
+}
+nav ul li a:hover{
+    border: 2px solid cornsilk ;
+    background-color: indigo;
+    color:cornsilk;
+}
+
 main{
         float:left;
         width: 65vw;
-        height:70vh;       
-        background-color: hsl(223, 60%, 31%);
+        height:100vh;       
+        background-color:yellow;
     }
+
 aside{
     float:right;
-    width: 25vw;
-    height:70vh;
+    width: 28vw;
+    height:100vh;
     background-color: hsl(206, 83%, 37%);
 }
+
+aside ul{
+    list-style-type: circle;
+}
+
+aside li{
+    line-height: 1rem;
+    color: rbga(133, 245, 21,0.8)
+}
+
+aside a{
+    color:rgba(200, 100, 50, 0.5)
+}
+
+aside a:hover{
+    color: #f67;
+}
+
 footer{
     clear:both;
     background-color: hsl(52, 93%, 42%);
@@ -40,8 +81,31 @@ footer{
 #para2{
     color: rgba(201, 204, 0, 0.768)
 }
-a:hover{
-    color: #f67;
+
+form{
+    padding: 3px;
+    border: 5px dashed black;
+}
+input[type=text], input[type=email], input[type=submit], select, option{
+    display: block;
+    width: 50%;
+    height: 2em;
+}
+input[type=radio], input[type=checkbox]{
+    height: 2em;
+    width: 2em;
+}
+select, option, label, legend{
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+textarea{
+    display: block;
+    width: 50%;
+}
+fieldset{
+    border: none;
 }
 footer p{
     font-size:.7em;
