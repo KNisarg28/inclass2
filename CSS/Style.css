@@ -1,22 +1,33 @@
 /* Nisarg Khyali 8910019*/
+
+html{
+    font: normal normal normal 20px  Arial ;
+}
 body{
-    font: normal normal normal 20px Verdana;
     width: 100vw;
     height: 100vw;
     background-color: rgb(163, 156, 241);
+    display: flex;
+    flex-direction: column;
 } 
 h1{
+    font-size: 2.5rem;
     color:blueviolet; 
-    font:40px;
+     
 }
 
 h2{
+    flex: 1 10%;
     font-size: 2rem;
     color:#a63;
 }
 
 header{
     background-color: hsl(71, 87%, 50%);
+}
+nav{
+
+    flex: 1 5%;
 }
 nav ul li{
     display: inline;
@@ -26,7 +37,7 @@ nav ul li a{
     border: 2px solid indigo ;
     background-color: cornsilk;
     text-decoration: none;
-    padding: 4px;
+    padding: 1em;
     color:indigo; 
 }
 nav ul li a:hover{
@@ -34,18 +45,22 @@ nav ul li a:hover{
     background-color: indigo;
     color:cornsilk;
 }
+section{
+    display: flex;
+    flex-direction: row;
+    flex:4 8%;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
 
-main{
-        float:left;
-        width: 65vw;
-        height:100vh;       
+main{       
         background-color:yellow;
+        flex: 2 1 70%;
     }
 
 aside{
-    float:right;
-    width: 28vw;
-    height:100vh;
+    flex: 1 2 30%;
     background-color: hsl(206, 83%, 37%);
 }
 
@@ -53,8 +68,8 @@ aside ul{
     list-style-type: circle;
 }
 
-aside li{
-    line-height: 1rem;
+aside li,a{
+    line-height: 2rem;
     color: rbga(133, 245, 21,0.8)
 }
 
@@ -67,12 +82,12 @@ aside a:hover{
 }
 
 footer{
-    clear:both;
+    flex: 1 5%;
     background-color: hsl(52, 93%, 42%);
 }
 .structural{
-    margin : 10px;
-    padding : 10px;
+    margin : 1rem;
+    padding : 1rem;
     border: 2px solid black;
 }
 #para1{
@@ -107,6 +122,32 @@ textarea{
 fieldset{
     border: none;
 }
+#gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+}
+
+figure{
+    border:2px solid black;
+}
+img{
+    width: 80%;
+    height: 80%;
+}
 footer p{
-    font-size:.7em;
+    font-size:0.7em;
+}
+@media (max-width:1200px){
+    html{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 600px){
+    #gallery{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
 }
